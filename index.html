@@ -95,7 +95,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -275,6 +275,501 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/27/python基础2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jccccccccc">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jc的漫漫数据路">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/27/python基础2/" itemprop="url">python基础2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-27T19:00:54+08:00">
+                2019-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><ul>
+<li><code>if 1 in num_list:</code></li>
+<li><code>else</code>非必选项，可用<code>elif</code>代替</li>
+<li><code>if list:</code>若列表为空返回False</li>
+</ul>
+<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><ul>
+<li>使用<code>标志</code></li>
+<li><code>break</code>直接中止循环</li>
+<li><code>continue</code>直接返回到循环的开头</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
+<li>编写函数时，可给每个<code>形参</code>指定<code>默认值</code></li>
+<li>可使用<code>list[:]</code>禁止函数修改列表</li>
+<li><code>def fun(*x)</code>代表传递任意数量的实参，<code>**</code>代表字典</li>
+</ul>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, age)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sit</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(self.name.title() + <span class="string">"is now sitting."</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">roll_over</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(self.name.title() + <span class="string">"rolled over!"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FireDog</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, age)</span>:</span></span><br><span class="line">        super().__init__(self, name, age)</span><br></pre></td></tr></table></figure>
+
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    print(<span class="number">5</span>/<span class="number">0</span>)</span><br><span class="line"><span class="keyword">except</span> ZeroDivisionError</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ul>
+<li><code>测试函数</code>，<code>测试类</code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"><span class="keyword">from</span> name_function <span class="keyword">import</span> get_formatterd_name</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NamesTestCase</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">    <span class="string">"""测试name_function.py"""</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_first_last_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""能够正确的处理像Janis Joplin这样的姓名吗？"""</span></span><br><span class="line">        formatted_name = get_formatterd_name(<span class="string">'Janis'</span>,<span class="string">'Joplin'</span>)</span><br><span class="line">        self.assertEqual(formatted_name,<span class="string">'Janis Joplin'</span>)</span><br><span class="line"></span><br><span class="line">unittest.main()</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/27/python基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jccccccccc">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jc的漫漫数据路">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/27/python基础/" itemprop="url">python基础</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-27T19:00:51+08:00">
+                2019-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="PYTHON基本数据类型"><a href="#PYTHON基本数据类型" class="headerlink" title="PYTHON基本数据类型"></a>PYTHON基本数据类型</h2><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>字符串就是一系列字符。在Python中，用引号括起的都是字符串，其中的引号可以是单引号也可以是双引号。</p>
+<ul>
+<li>Python使用加号<code>+</code>来合并字符串</li>
+<li>要在字符串中添加制表符，可使用<code>\t</code>，添加换行符，可使用<code>\n</code></li>
+<li><code>lstrip()</code>，<code>rstrip()</code>，<code>strip()</code>可删除字符串的空白<h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3>在Python中，数字类型主要包括<code>整数</code>和<code>浮点数</code>。</li>
+<li>两个乘号<code>**</code>代表乘方运算</li>
+<li><code>str()</code>可将数字类型转换为字符串类型<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3>列表由一系列按特定顺序排列的元素组成。</li>
+<li>列表是<code>可变</code>的</li>
+<li>第一个列表元素的索引是<code>[0]</code></li>
+<li><code>append()</code>可在列表末尾添加元素，<code>insert(0,&#39;a&#39;)</code>可将字符串插至列表的第一个</li>
+<li><code>del list[0]</code>，<code>pop(0)</code>，<code>remove(&#39;a&#39;)</code>均可删除列表元素，但是方法<code>remove()</code>仅可删除第一个指定的值</li>
+<li><code>sort()</code>将列表永久排序，<code>sorted()</code>将列表临时排序，<code>reverse()</code>永久将列表倒序</li>
+<li><code>for</code>循环遍历整个列表</li>
+<li><code>range()</code>可创建数字列表，左闭右开</li>
+<li><code>切片</code>是指处理列表的部分元素，复制列表时复制<code>切片</code>，不要直接复制列表<h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><code>不可变</code>的列表称为元组。</li>
+<li>给元组<code>变量</code>赋值是合法的<h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3>在Python中。字典是一系列<code>键-值</code>对，可将任何Python对象用作字典中的值。</li>
+<li>字典是一种动态结构，可随时在其中添加键-值对。</li>
+<li><code>del dict[&#39;key&#39;]</code>可删除字典元素</li>
+<li><code>for key,value in dict.items()</code>可遍历字典</li>
+<li><code>keys()</code>，<code>values()</code>代表字典的键和值</li>
+<li><code>set()</code>可去重</li>
+</ul>
+<h2 id="PANDAS快速入门"><a href="#PANDAS快速入门" class="headerlink" title="PANDAS快速入门"></a>PANDAS快速入门</h2><h3 id="了解数据"><a href="#了解数据" class="headerlink" title="了解数据"></a>了解数据</h3><ul>
+<li><code>pd.read_csv()</code></li>
+<li><code>chipo.head()</code></li>
+<li><code>chipo.shape</code></li>
+<li><code>chipo.columns</code></li>
+<li><code>chipo.index</code></li>
+<li><code>chipo[&#39;item_name&#39;].nunique()</code></li>
+<li><code>chipo[&#39;choice_description&#39;].value_counts()</code></li>
+<li><code>chipo[&#39;quantity&#39;].sum()</code></li>
+<li><code>dollarizer = lambda x: float(x[1:-1])
+chipo[&#39;item_price&#39;] = chipo[&#39;item_price&#39;].apply(dollarizer)</code></li>
+<li><code>chipo[[&#39;order_id&#39;,&#39;sub_total&#39;]].groupby(by=[&#39;order_id&#39;]
+).agg({&#39;sub_total&#39;:&#39;sum&#39;})[&#39;sub_total&#39;].mean()</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c = chipo[[<span class="string">'item_name'</span>,<span class="string">'quantity'</span>]].groupby([<span class="string">'item_name'</span>],as_index=<span class="literal">False</span>).agg(&#123;<span class="string">'quantity'</span>:sum&#125;)</span><br><span class="line">c.sort_values([<span class="string">'quantity'</span>],ascending=<span class="literal">False</span>,inplace=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>chipo.dtypes</code></li>
+</ul>
+<h3 id="数据过滤和排序"><a href="#数据过滤和排序" class="headerlink" title="数据过滤和排序"></a>数据过滤和排序</h3><ul>
+<li><code>euro12.info()</code></li>
+<li><code>discipline.sort_values([&#39;Red Cards&#39;, &#39;Yellow Cards&#39;], ascending = False)</code></li>
+<li><code>euro12[euro12.Goals &gt; 6]</code></li>
+<li><code>euro12.iloc[: , 0:7]</code></li>
+<li><code>euro12.loc[euro12.Team.isin([&#39;England&#39;, &#39;Italy&#39;, &#39;Russia&#39;]), [&#39;Team&#39;,&#39;Shooting Accuracy&#39;]]</code></li>
+</ul>
+<h3 id="数据分组"><a href="#数据分组" class="headerlink" title="数据分组"></a>数据分组</h3><ul>
+<li><code>drinks.groupby(&#39;continent&#39;).beer_servings.mean()</code></li>
+<li><code>drinks.groupby(&#39;continent&#39;).wine_servings.describe()</code></li>
+<li><code>drinks.groupby(&#39;continent&#39;).spirit_servings.agg([&#39;mean&#39;, &#39;min&#39;, &#39;max&#39;])</code></li>
+</ul>
+<h3 id="Apply函数"><a href="#Apply函数" class="headerlink" title="Apply函数"></a>Apply函数</h3><ul>
+<li><code>crime.Year = pd.to_datetime(crime.Year, format=&#39;%Y&#39;)</code></li>
+<li><code>crime = crime.set_index(&#39;Year&#39;, drop = True)</code></li>
+<li><code>del crime[&#39;Total&#39;]</code></li>
+<li><code>crime.resample(&#39;10AS&#39;).sum()</code></li>
+<li><code>crime.idxmax(0)</code></li>
+</ul>
+<h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><ul>
+<li><code>all_data = pd.concat([data1, data2])</code></li>
+<li><code>all_data_col = pd.concat([data1, data2], axis = 1)</code></li>
+<li><code>pd.merge(all_data, data3, on=&#39;subject_id&#39;)</code></li>
+<li><code>pd.merge(data1, data2, on=&#39;subject_id&#39;, how=&#39;inner&#39;)</code></li>
+<li><code>pd.merge(data1, data2, on=&#39;subject_id&#39;, how=&#39;outer&#39;)</code></li>
+</ul>
+<h3 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fix_century</span><span class="params">(x)</span>:</span></span><br><span class="line">    year = x.year - <span class="number">100</span> <span class="keyword">if</span> x.year &gt; <span class="number">1989</span> <span class="keyword">else</span> x.year</span><br><span class="line">    <span class="keyword">return</span> datetime.date(year, x.month, x.day)</span><br><span class="line"></span><br><span class="line"><span class="comment"># apply the function fix_century on the column and replace the values to the right ones</span></span><br><span class="line">data[<span class="string">'Yr_Mo_Dy'</span>] = data[<span class="string">'Yr_Mo_Dy'</span>].apply(fix_century)</span><br><span class="line"></span><br><span class="line"><span class="comment"># data.info()</span></span><br><span class="line">data.head()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>data.isnull().sum()</code></p>
+</li>
+<li><p><code>data.shape[0] - data.isnull().sum()</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># creates a new column 'date' and gets the values from the index</span></span><br><span class="line">data[<span class="string">'date'</span>] = data.index</span><br><span class="line"></span><br><span class="line"><span class="comment"># creates a column for each value from date</span></span><br><span class="line">data[<span class="string">'month'</span>] = data[<span class="string">'date'</span>].apply(<span class="keyword">lambda</span> date: date.month)</span><br><span class="line">data[<span class="string">'year'</span>] = data[<span class="string">'date'</span>].apply(<span class="keyword">lambda</span> date: date.year)</span><br><span class="line">data[<span class="string">'day'</span>] = data[<span class="string">'date'</span>].apply(<span class="keyword">lambda</span> date: date.day)</span><br><span class="line"></span><br><span class="line"><span class="comment"># gets all value from the month 1 and assign to janyary_winds</span></span><br><span class="line">january_winds = data.query(<span class="string">'month == 1'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># gets the mean from january_winds, using .loc to not print the mean of month, year and day</span></span><br><span class="line">january_winds.loc[:,<span class="string">'RPT'</span>:<span class="string">"MAL"</span>].mean()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>data.query(&#39;month == 1 and day == 1&#39;)</code></p>
+</li>
+</ul>
+<h3 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sum the instances of males and females</span></span><br><span class="line">males = (titanic[<span class="string">'Sex'</span>] == <span class="string">'male'</span>).sum()</span><br><span class="line">females = (titanic[<span class="string">'Sex'</span>] == <span class="string">'female'</span>).sum()</span><br><span class="line"></span><br><span class="line"><span class="comment"># put them into a list called proportions</span></span><br><span class="line">proportions = [males, females]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a pie chart</span></span><br><span class="line">plt.pie(</span><br><span class="line">    <span class="comment"># using proportions</span></span><br><span class="line">    proportions,</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># with the labels being officer names</span></span><br><span class="line">    labels = [<span class="string">'Males'</span>, <span class="string">'Females'</span>],</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># with no shadows</span></span><br><span class="line">    shadow = <span class="literal">False</span>,</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># with colors</span></span><br><span class="line">    colors = [<span class="string">'blue'</span>,<span class="string">'red'</span>],</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># with one slide exploded out</span></span><br><span class="line">    explode = (<span class="number">0.15</span> , <span class="number">0</span>),</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># with the start angle at 90%</span></span><br><span class="line">    startangle = <span class="number">90</span>,</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># with the percent listed as a fraction</span></span><br><span class="line">    autopct = <span class="string">'%1.1f%%'</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"><span class="comment"># View the plot drop above</span></span><br><span class="line">plt.axis(<span class="string">'equal'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set labels</span></span><br><span class="line">plt.title(<span class="string">"Sex Proportion"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># View the plot</span></span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># creates the plot using</span></span><br><span class="line">lm = sns.lmplot(x = <span class="string">'Age'</span>, y = <span class="string">'Fare'</span>, data = titanic, hue = <span class="string">'Sex'</span>, fit_reg=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># set title</span></span><br><span class="line">lm.set(title = <span class="string">'Fare x Age'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># get the axes object and tweak it</span></span><br><span class="line">axes = lm.axes</span><br><span class="line">axes[<span class="number">0</span>,<span class="number">0</span>].set_ylim(<span class="number">-5</span>,)</span><br><span class="line">axes[<span class="number">0</span>,<span class="number">0</span>].set_xlim(<span class="number">-5</span>,<span class="number">85</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sort the values from the top to the least value and slice the first 5 items</span></span><br><span class="line">df = titanic.Fare.sort_values(ascending = <span class="literal">False</span>)</span><br><span class="line">df</span><br><span class="line"></span><br><span class="line"><span class="comment"># create bins interval using numpy</span></span><br><span class="line">binsVal = np.arange(<span class="number">0</span>,<span class="number">600</span>,<span class="number">10</span>)</span><br><span class="line">binsVal</span><br><span class="line"></span><br><span class="line"><span class="comment"># create the plot</span></span><br><span class="line">plt.hist(df, bins = binsVal)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set the title and labels</span></span><br><span class="line">plt.xlabel(<span class="string">'Fare'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'Frequency'</span>)</span><br><span class="line">plt.title(<span class="string">'Fare Payed Histrogram'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># show the plot</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h3 id="时间序列"><a href="#时间序列" class="headerlink" title="时间序列"></a>时间序列</h3><ul>
+<li><code>apple.index.is_unique</code></li>
+<li><code>apple.sort_index(ascending = True).head()</code></li>
+<li><code>(apple.index.max() - apple.index.min()).days</code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># makes the plot and assign it to a variable</span></span><br><span class="line">appl_open = apple[<span class="string">'Adj Close'</span>].plot(title = <span class="string">"Apple Stock"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># changes the size of the graph</span></span><br><span class="line">fig = appl_open.get_figure()</span><br><span class="line">fig.set_size_inches(<span class="number">13.5</span>, <span class="number">9</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><ul>
+<li><code>iris.iloc[10:20,2:3] = np.nan</code></li>
+<li><code>iris.petal_length.fillna(1, inplace = True)</code></li>
+<li><code>iris = iris.dropna(how=&#39;any&#39;)</code></li>
+<li><code>iris = iris.reset_index(drop = True)</code></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/27/统计学-数据分布/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jccccccccc">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jc的漫漫数据路">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/27/统计学-数据分布/" itemprop="url">统计学-数据分布</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-27T18:59:57+08:00">
+                2019-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="离散分布"><a href="#离散分布" class="headerlink" title="离散分布"></a>离散分布</h2><h3 id="离散均匀分布"><a href="#离散均匀分布" class="headerlink" title="离散均匀分布"></a>离散均匀分布</h3><p>$$P(X=x|N) = \frac{1}{N}$$<br>$$E(X) = \frac{N+1}{2}$$<br>$$Var(X) = \frac{(N+1)(N-1)}{12}$$</p>
+<h3 id="超几何分布"><a href="#超几何分布" class="headerlink" title="超几何分布"></a>超几何分布</h3><p>$$P(X=x|N,M,K) = \frac{\binom{M}{x}\binom{N-M}{K-x}}{\binom{N}{K}}$$<br>$$E(X) = \frac{KM}{N}$$<br>$$Var(X) = \frac{KM}{N}(\frac{(N-M)(N-K)}{N(N-1)})$$</p>
+<h3 id="伯努利分布"><a href="#伯努利分布" class="headerlink" title="伯努利分布"></a>伯努利分布</h3><p>$$P(X=x)=p^x(1-p)^{1-x}$$<br>$$E(X)=p$$<br>$$ Var(X)=p(1-p)$$</p>
+<h3 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h3><p>$$P(X=x|n,p)=\binom{n}{x}p^x(1-p)^{n-x}$$<br>$$E(X)=np$$<br>$$ Var(X)=np(1-p)$$</p>
+<h3 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h3><p>$$P(X=x|\lambda) = \frac{e^{-x}\lambda^x}{x!}$$<br>$$E(X) = \lambda$$<br>$$Var(X) = \lambda$$</p>
+<h3 id="负二项分布"><a href="#负二项分布" class="headerlink" title="负二项分布"></a>负二项分布</h3><p>$$P(X=x|r,p)=\binom{x-1}{r-1}p^r(1-p)^{x-r}$$<br>$$E(X)=\frac{r(1-p)}{p}$$<br>$$Var(X)=\frac{r(1-p)}{p^2}$$</p>
+<h3 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h3><p>$$P(X=x|p)=p(1-p)^{x-1}$$<br>$$E(X)=\frac{1}{p}$$<br>$$Var(X)=\frac{(1-p)}{p^2}$$</p>
+<h2 id="连续分布"><a href="#连续分布" class="headerlink" title="连续分布"></a>连续分布</h2><h3 id="连续均匀分布"><a href="#连续均匀分布" class="headerlink" title="连续均匀分布"></a>连续均匀分布</h3><p>$$<br>f(x|a,b) =<br>\begin{cases}<br>\frac{1}{b-a}  \<br>0<br>\end{cases}<br>$$<br>$$E(X)=\frac{a+b}{2}$$<br>$$Var(X)=\frac{(b-a)^2}{12}$$</p>
+<h3 id="伽马分布"><a href="#伽马分布" class="headerlink" title="伽马分布"></a>伽马分布</h3><p>$$\Gamma(\alpha)=\int_{0}^\infty t^{\alpha-1}e^{-t}dt$$<br>$$f(x|\alpha,\beta)=\frac{1}{\Gamma(\alpha)\beta^\alpha}x^{\alpha-1}e^{-x/\beta}$$<br>$$E(X)=\alpha\beta$$<br>$$Var(X)=\alpha\beta^2$$</p>
+<ul>
+<li>当$\alpha=p/2$且$\beta=2$时，伽马分布为卡方分布</li>
+<li>当$\alpha=1$时，伽马分布为指数分布</li>
+</ul>
+<h3 id="威布尔分布"><a href="#威布尔分布" class="headerlink" title="威布尔分布"></a>威布尔分布</h3><p>$$f_Y(y|\gamma,\beta)=\frac{\gamma}{\beta}y^{\gamma-1}e^{-y^{\gamma}/\beta}$$</p>
+<h3 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h3><p>$$f(x|\mu,\sigma^2)=\frac{1}{\sqrt{2\pi}\sigma}e^{-(x-\mu)^2/2\sigma^2}$$<br>$$E(X)=\mu$$<br>$$Var(X)=\sigma^2$$</p>
+<h3 id="贝塔分布"><a href="#贝塔分布" class="headerlink" title="贝塔分布"></a>贝塔分布</h3><p>$$B(\alpha,\beta)=\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$$<br>$$f(x|\alpha,\beta)=\frac{1}{B(\alpha,\beta)}x^{\alpha-1}(1-x)^{\beta-1}$$<br>$$E(X)=\frac{\alpha}{\alpha+\beta}$$<br>$$Var(X)=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$$</p>
+<h3 id="柯西分布"><a href="#柯西分布" class="headerlink" title="柯西分布"></a>柯西分布</h3><p>$$f(x|\theta)=\frac{1}{\pi}\frac{1}{1+(x-\theta)^2}$$</p>
+<h3 id="对数正态分布"><a href="#对数正态分布" class="headerlink" title="对数正态分布"></a>对数正态分布</h3><p>$$f(x|\mu,\sigma^2)=\frac{1}{\sqrt{2\pi}\sigma}\frac{1}{x}e^{-(logx-\mu)^2/2\sigma^2}$$<br>$$E(X)=e^{\mu+(\sigma^2/2)}$$<br>$$Var(X)=e^{2(\mu+\sigma^2)}-e^{2\mu+\sigma^2}$$</p>
+<h3 id="双指数分布"><a href="#双指数分布" class="headerlink" title="双指数分布"></a>双指数分布</h3><p>$$f(x|\mu,\sigma)=\frac{1}{2\sigma}e^{-|x-\mu|/\sigma}$$<br>$$E(X)=\mu$$<br>$$Var(X)=2\sigma^2$$</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -499,7 +994,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -507,15 +1002,6 @@
 
             
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">标签</span>
-                
-              </div>
             
 
           </nav>

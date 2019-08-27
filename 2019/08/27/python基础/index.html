@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="PYTHON基本数据类型字符串字符串就是一系列字符。在Python中，用引号括起的都是字符串，其中的引号可以是单引号也可以是双引号。  Python使用加号+来合并字符串 要在字符串中添加制表符，可使用\t，添加换行符，可使用\n lstrip()，rstrip()，strip()可删除字符串的空白数字在Python中，数字类型主要包括整数和浮点数。 两个乘号**代表乘方运算 str()可将数字类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础">
+<meta property="og:url" content="http://yoursite.com/2019/08/27/python基础/index.html">
+<meta property="og:site_name" content="jc的漫漫数据路">
+<meta property="og:description" content="PYTHON基本数据类型字符串字符串就是一系列字符。在Python中，用引号括起的都是字符串，其中的引号可以是单引号也可以是双引号。  Python使用加号+来合并字符串 要在字符串中添加制表符，可使用\t，添加换行符，可使用\n lstrip()，rstrip()，strip()可删除字符串的空白数字在Python中，数字类型主要包括整数和浮点数。 两个乘号**代表乘方运算 str()可将数字类">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-27T11:01:11.647Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python基础">
+<meta name="twitter:description" content="PYTHON基本数据类型字符串字符串就是一系列字符。在Python中，用引号括起的都是字符串，其中的引号可以是单引号也可以是双引号。  Python使用加号+来合并字符串 要在字符串中添加制表符，可使用\t，添加换行符，可使用\n lstrip()，rstrip()，strip()可删除字符串的空白数字在Python中，数字类型主要包括整数和浮点数。 两个乘号**代表乘方运算 str()可将数字类">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/08/27/python基础/">
+
+
+
+
+
+  <title>python基础 | jc的漫漫数据路</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">jc的漫漫数据路</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/27/python基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jccccccccc">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jc的漫漫数据路">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">python基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-27T19:00:51+08:00">
+                2019-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="PYTHON基本数据类型"><a href="#PYTHON基本数据类型" class="headerlink" title="PYTHON基本数据类型"></a>PYTHON基本数据类型</h2><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>字符串就是一系列字符。在Python中，用引号括起的都是字符串，其中的引号可以是单引号也可以是双引号。</p>
+<ul>
+<li>Python使用加号<code>+</code>来合并字符串</li>
+<li>要在字符串中添加制表符，可使用<code>\t</code>，添加换行符，可使用<code>\n</code></li>
+<li><code>lstrip()</code>，<code>rstrip()</code>，<code>strip()</code>可删除字符串的空白<h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3>在Python中，数字类型主要包括<code>整数</code>和<code>浮点数</code>。</li>
+<li>两个乘号<code>**</code>代表乘方运算</li>
+<li><code>str()</code>可将数字类型转换为字符串类型<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3>列表由一系列按特定顺序排列的元素组成。</li>
+<li>列表是<code>可变</code>的</li>
+<li>第一个列表元素的索引是<code>[0]</code></li>
+<li><code>append()</code>可在列表末尾添加元素，<code>insert(0,&#39;a&#39;)</code>可将字符串插至列表的第一个</li>
+<li><code>del list[0]</code>，<code>pop(0)</code>，<code>remove(&#39;a&#39;)</code>均可删除列表元素，但是方法<code>remove()</code>仅可删除第一个指定的值</li>
+<li><code>sort()</code>将列表永久排序，<code>sorted()</code>将列表临时排序，<code>reverse()</code>永久将列表倒序</li>
+<li><code>for</code>循环遍历整个列表</li>
+<li><code>range()</code>可创建数字列表，左闭右开</li>
+<li><code>切片</code>是指处理列表的部分元素，复制列表时复制<code>切片</code>，不要直接复制列表<h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><code>不可变</code>的列表称为元组。</li>
+<li>给元组<code>变量</code>赋值是合法的<h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3>在Python中。字典是一系列<code>键-值</code>对，可将任何Python对象用作字典中的值。</li>
+<li>字典是一种动态结构，可随时在其中添加键-值对。</li>
+<li><code>del dict[&#39;key&#39;]</code>可删除字典元素</li>
+<li><code>for key,value in dict.items()</code>可遍历字典</li>
+<li><code>keys()</code>，<code>values()</code>代表字典的键和值</li>
+<li><code>set()</code>可去重</li>
+</ul>
+<h2 id="PANDAS快速入门"><a href="#PANDAS快速入门" class="headerlink" title="PANDAS快速入门"></a>PANDAS快速入门</h2><h3 id="了解数据"><a href="#了解数据" class="headerlink" title="了解数据"></a>了解数据</h3><ul>
+<li><code>pd.read_csv()</code></li>
+<li><code>chipo.head()</code></li>
+<li><code>chipo.shape</code></li>
+<li><code>chipo.columns</code></li>
+<li><code>chipo.index</code></li>
+<li><code>chipo[&#39;item_name&#39;].nunique()</code></li>
+<li><code>chipo[&#39;choice_description&#39;].value_counts()</code></li>
+<li><code>chipo[&#39;quantity&#39;].sum()</code></li>
+<li><code>dollarizer = lambda x: float(x[1:-1])
+chipo[&#39;item_price&#39;] = chipo[&#39;item_price&#39;].apply(dollarizer)</code></li>
+<li><code>chipo[[&#39;order_id&#39;,&#39;sub_total&#39;]].groupby(by=[&#39;order_id&#39;]
+).agg({&#39;sub_total&#39;:&#39;sum&#39;})[&#39;sub_total&#39;].mean()</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c = chipo[[<span class="string">'item_name'</span>,<span class="string">'quantity'</span>]].groupby([<span class="string">'item_name'</span>],as_index=<span class="literal">False</span>).agg(&#123;<span class="string">'quantity'</span>:sum&#125;)</span><br><span class="line">c.sort_values([<span class="string">'quantity'</span>],ascending=<span class="literal">False</span>,inplace=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>chipo.dtypes</code></li>
+</ul>
+<h3 id="数据过滤和排序"><a href="#数据过滤和排序" class="headerlink" title="数据过滤和排序"></a>数据过滤和排序</h3><ul>
+<li><code>euro12.info()</code></li>
+<li><code>discipline.sort_values([&#39;Red Cards&#39;, &#39;Yellow Cards&#39;], ascending = False)</code></li>
+<li><code>euro12[euro12.Goals &gt; 6]</code></li>
+<li><code>euro12.iloc[: , 0:7]</code></li>
+<li><code>euro12.loc[euro12.Team.isin([&#39;England&#39;, &#39;Italy&#39;, &#39;Russia&#39;]), [&#39;Team&#39;,&#39;Shooting Accuracy&#39;]]</code></li>
+</ul>
+<h3 id="数据分组"><a href="#数据分组" class="headerlink" title="数据分组"></a>数据分组</h3><ul>
+<li><code>drinks.groupby(&#39;continent&#39;).beer_servings.mean()</code></li>
+<li><code>drinks.groupby(&#39;continent&#39;).wine_servings.describe()</code></li>
+<li><code>drinks.groupby(&#39;continent&#39;).spirit_servings.agg([&#39;mean&#39;, &#39;min&#39;, &#39;max&#39;])</code></li>
+</ul>
+<h3 id="Apply函数"><a href="#Apply函数" class="headerlink" title="Apply函数"></a>Apply函数</h3><ul>
+<li><code>crime.Year = pd.to_datetime(crime.Year, format=&#39;%Y&#39;)</code></li>
+<li><code>crime = crime.set_index(&#39;Year&#39;, drop = True)</code></li>
+<li><code>del crime[&#39;Total&#39;]</code></li>
+<li><code>crime.resample(&#39;10AS&#39;).sum()</code></li>
+<li><code>crime.idxmax(0)</code></li>
+</ul>
+<h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><ul>
+<li><code>all_data = pd.concat([data1, data2])</code></li>
+<li><code>all_data_col = pd.concat([data1, data2], axis = 1)</code></li>
+<li><code>pd.merge(all_data, data3, on=&#39;subject_id&#39;)</code></li>
+<li><code>pd.merge(data1, data2, on=&#39;subject_id&#39;, how=&#39;inner&#39;)</code></li>
+<li><code>pd.merge(data1, data2, on=&#39;subject_id&#39;, how=&#39;outer&#39;)</code></li>
+</ul>
+<h3 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fix_century</span><span class="params">(x)</span>:</span></span><br><span class="line">    year = x.year - <span class="number">100</span> <span class="keyword">if</span> x.year &gt; <span class="number">1989</span> <span class="keyword">else</span> x.year</span><br><span class="line">    <span class="keyword">return</span> datetime.date(year, x.month, x.day)</span><br><span class="line"></span><br><span class="line"><span class="comment"># apply the function fix_century on the column and replace the values to the right ones</span></span><br><span class="line">data[<span class="string">'Yr_Mo_Dy'</span>] = data[<span class="string">'Yr_Mo_Dy'</span>].apply(fix_century)</span><br><span class="line"></span><br><span class="line"><span class="comment"># data.info()</span></span><br><span class="line">data.head()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>data.isnull().sum()</code></p>
+</li>
+<li><p><code>data.shape[0] - data.isnull().sum()</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># creates a new column 'date' and gets the values from the index</span></span><br><span class="line">data[<span class="string">'date'</span>] = data.index</span><br><span class="line"></span><br><span class="line"><span class="comment"># creates a column for each value from date</span></span><br><span class="line">data[<span class="string">'month'</span>] = data[<span class="string">'date'</span>].apply(<span class="keyword">lambda</span> date: date.month)</span><br><span class="line">data[<span class="string">'year'</span>] = data[<span class="string">'date'</span>].apply(<span class="keyword">lambda</span> date: date.year)</span><br><span class="line">data[<span class="string">'day'</span>] = data[<span class="string">'date'</span>].apply(<span class="keyword">lambda</span> date: date.day)</span><br><span class="line"></span><br><span class="line"><span class="comment"># gets all value from the month 1 and assign to janyary_winds</span></span><br><span class="line">january_winds = data.query(<span class="string">'month == 1'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># gets the mean from january_winds, using .loc to not print the mean of month, year and day</span></span><br><span class="line">january_winds.loc[:,<span class="string">'RPT'</span>:<span class="string">"MAL"</span>].mean()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>data.query(&#39;month == 1 and day == 1&#39;)</code></p>
+</li>
+</ul>
+<h3 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sum the instances of males and females</span></span><br><span class="line">males = (titanic[<span class="string">'Sex'</span>] == <span class="string">'male'</span>).sum()</span><br><span class="line">females = (titanic[<span class="string">'Sex'</span>] == <span class="string">'female'</span>).sum()</span><br><span class="line"></span><br><span class="line"><span class="comment"># put them into a list called proportions</span></span><br><span class="line">proportions = [males, females]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a pie chart</span></span><br><span class="line">plt.pie(</span><br><span class="line">    <span class="comment"># using proportions</span></span><br><span class="line">    proportions,</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># with the labels being officer names</span></span><br><span class="line">    labels = [<span class="string">'Males'</span>, <span class="string">'Females'</span>],</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># with no shadows</span></span><br><span class="line">    shadow = <span class="literal">False</span>,</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># with colors</span></span><br><span class="line">    colors = [<span class="string">'blue'</span>,<span class="string">'red'</span>],</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># with one slide exploded out</span></span><br><span class="line">    explode = (<span class="number">0.15</span> , <span class="number">0</span>),</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># with the start angle at 90%</span></span><br><span class="line">    startangle = <span class="number">90</span>,</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># with the percent listed as a fraction</span></span><br><span class="line">    autopct = <span class="string">'%1.1f%%'</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"><span class="comment"># View the plot drop above</span></span><br><span class="line">plt.axis(<span class="string">'equal'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set labels</span></span><br><span class="line">plt.title(<span class="string">"Sex Proportion"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># View the plot</span></span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># creates the plot using</span></span><br><span class="line">lm = sns.lmplot(x = <span class="string">'Age'</span>, y = <span class="string">'Fare'</span>, data = titanic, hue = <span class="string">'Sex'</span>, fit_reg=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># set title</span></span><br><span class="line">lm.set(title = <span class="string">'Fare x Age'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># get the axes object and tweak it</span></span><br><span class="line">axes = lm.axes</span><br><span class="line">axes[<span class="number">0</span>,<span class="number">0</span>].set_ylim(<span class="number">-5</span>,)</span><br><span class="line">axes[<span class="number">0</span>,<span class="number">0</span>].set_xlim(<span class="number">-5</span>,<span class="number">85</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sort the values from the top to the least value and slice the first 5 items</span></span><br><span class="line">df = titanic.Fare.sort_values(ascending = <span class="literal">False</span>)</span><br><span class="line">df</span><br><span class="line"></span><br><span class="line"><span class="comment"># create bins interval using numpy</span></span><br><span class="line">binsVal = np.arange(<span class="number">0</span>,<span class="number">600</span>,<span class="number">10</span>)</span><br><span class="line">binsVal</span><br><span class="line"></span><br><span class="line"><span class="comment"># create the plot</span></span><br><span class="line">plt.hist(df, bins = binsVal)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set the title and labels</span></span><br><span class="line">plt.xlabel(<span class="string">'Fare'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'Frequency'</span>)</span><br><span class="line">plt.title(<span class="string">'Fare Payed Histrogram'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># show the plot</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h3 id="时间序列"><a href="#时间序列" class="headerlink" title="时间序列"></a>时间序列</h3><ul>
+<li><code>apple.index.is_unique</code></li>
+<li><code>apple.sort_index(ascending = True).head()</code></li>
+<li><code>(apple.index.max() - apple.index.min()).days</code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># makes the plot and assign it to a variable</span></span><br><span class="line">appl_open = apple[<span class="string">'Adj Close'</span>].plot(title = <span class="string">"Apple Stock"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># changes the size of the graph</span></span><br><span class="line">fig = appl_open.get_figure()</span><br><span class="line">fig.set_size_inches(<span class="number">13.5</span>, <span class="number">9</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><ul>
+<li><code>iris.iloc[10:20,2:3] = np.nan</code></li>
+<li><code>iris.petal_length.fillna(1, inplace = True)</code></li>
+<li><code>iris = iris.dropna(how=&#39;any&#39;)</code></li>
+<li><code>iris = iris.reset_index(drop = True)</code></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/27/统计学-数据分布/" rel="next" title="统计学-数据分布">
+                <i class="fa fa-chevron-left"></i> 统计学-数据分布
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/27/python基础2/" rel="prev" title="python基础2">
+                python基础2 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">jccccccccc</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PYTHON基本数据类型"><span class="nav-number">1.</span> <span class="nav-text">PYTHON基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">1.1.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数字"><span class="nav-number">1.2.</span> <span class="nav-text">数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">1.3.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元组"><span class="nav-number">1.4.</span> <span class="nav-text">元组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典"><span class="nav-number">1.5.</span> <span class="nav-text">字典</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PANDAS快速入门"><span class="nav-number">2.</span> <span class="nav-text">PANDAS快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#了解数据"><span class="nav-number">2.1.</span> <span class="nav-text">了解数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据过滤和排序"><span class="nav-number">2.2.</span> <span class="nav-text">数据过滤和排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据分组"><span class="nav-number">2.3.</span> <span class="nav-text">数据分组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Apply函数"><span class="nav-number">2.4.</span> <span class="nav-text">Apply函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合并"><span class="nav-number">2.5.</span> <span class="nav-text">合并</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#统计"><span class="nav-number">2.6.</span> <span class="nav-text">统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可视化"><span class="nav-number">2.7.</span> <span class="nav-text">可视化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间序列"><span class="nav-number">2.8.</span> <span class="nav-text">时间序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据"><span class="nav-number">2.9.</span> <span class="nav-text">删除数据</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jccccccccc</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
