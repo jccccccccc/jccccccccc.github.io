@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="描述性统计是统计学中较为基础的概念，它是一种汇总统计，用于定量描述数据的特征。在数据挖掘中，描述性统计常用于数据的探索性分析（Exploratory Data Analysis，简称EDA）。总的来说，描述性统计主要分为三大类：  数据的集中趋势 数据的离散趋势 数据的分布趋势  数据的集中趋势数据的集中趋势是度量一组数据向某一中心值靠拢的程度，它反映了一组数据中心点的位置所在。集中趋势测度也就是">
+<meta name="description" content="描述性统计是统计学中较为基础的概念，它是一种汇总统计，用于定量描述数据的特征。在数据挖掘中，描述性统计常用于数据的探索性分析（Exploratory Data Analysis，简称EDA）。总的来说，描述性统计主要分为三大类：  数据的集中趋势 数据的离散趋势 数据的分布趋势">
 <meta property="og:type" content="article">
 <meta property="og:title" content="统计学-描述性统计">
 <meta property="og:url" content="http://yoursite.com/2019/08/27/统计学-描述性统计/index.html">
 <meta property="og:site_name" content="jc的漫漫数据路">
-<meta property="og:description" content="描述性统计是统计学中较为基础的概念，它是一种汇总统计，用于定量描述数据的特征。在数据挖掘中，描述性统计常用于数据的探索性分析（Exploratory Data Analysis，简称EDA）。总的来说，描述性统计主要分为三大类：  数据的集中趋势 数据的离散趋势 数据的分布趋势  数据的集中趋势数据的集中趋势是度量一组数据向某一中心值靠拢的程度，它反映了一组数据中心点的位置所在。集中趋势测度也就是">
+<meta property="og:description" content="描述性统计是统计学中较为基础的概念，它是一种汇总统计，用于定量描述数据的特征。在数据挖掘中，描述性统计常用于数据的探索性分析（Exploratory Data Analysis，简称EDA）。总的来说，描述性统计主要分为三大类：  数据的集中趋势 数据的离散趋势 数据的分布趋势">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-27T11:24:36.183Z">
+<meta property="og:updated_time" content="2019-08-27T11:35:52.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="统计学-描述性统计">
-<meta name="twitter:description" content="描述性统计是统计学中较为基础的概念，它是一种汇总统计，用于定量描述数据的特征。在数据挖掘中，描述性统计常用于数据的探索性分析（Exploratory Data Analysis，简称EDA）。总的来说，描述性统计主要分为三大类：  数据的集中趋势 数据的离散趋势 数据的分布趋势  数据的集中趋势数据的集中趋势是度量一组数据向某一中心值靠拢的程度，它反映了一组数据中心点的位置所在。集中趋势测度也就是">
+<meta name="twitter:description" content="描述性统计是统计学中较为基础的概念，它是一种汇总统计，用于定量描述数据的特征。在数据挖掘中，描述性统计常用于数据的探索性分析（Exploratory Data Analysis，简称EDA）。总的来说，描述性统计主要分为三大类：  数据的集中趋势 数据的离散趋势 数据的分布趋势">
 
 
 
@@ -337,6 +337,8 @@
 <li>数据的离散趋势</li>
 <li>数据的分布趋势</li>
 </ul>
+<a id="more"></a>
+
 <h2 id="数据的集中趋势"><a href="#数据的集中趋势" class="headerlink" title="数据的集中趋势"></a>数据的集中趋势</h2><p><code>数据的集中趋势</code>是度量一组数据向某一中心值靠拢的程度，它反映了一组数据中心点的位置所在。集中趋势测度也就是寻找数据水平的代表值或中心值。测度数据集中趋势的统计量主要包括<code>众数</code>、<code>中位数</code>和<code>平均数</code>。</p>
 <p><code>众数</code>是指在统计分布上具有明显集中趋势点的数值，代表数据的一般水平（众数可以不存在或多于一个）。简单点理解，众数就是一组数据中占比例最多的那个数。实现代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mode</span><span class="params">(list)</span>:</span></span><br><span class="line">    list_set = set(list)</span><br><span class="line">    frequency_dict = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> list_set:</span><br><span class="line">        frequency_dict[i] = list.count(i)</span><br><span class="line">    max_frequency = max(frequency_dict.values())</span><br><span class="line">    mode_list = []</span><br><span class="line">    <span class="keyword">if</span> max_frequency == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> mode_list</span><br><span class="line">    <span class="keyword">for</span> key,value <span class="keyword">in</span> frequency_dict.items():</span><br><span class="line">        <span class="keyword">if</span> value == max_frequency:</span><br><span class="line">            mode_list.append(key)</span><br><span class="line">    <span class="keyword">return</span> mode_list</span><br></pre></td></tr></table></figure>
