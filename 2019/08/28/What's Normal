@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="jc的漫漫数据路">
 <meta property="og:description" content="12345import pandas as pdimport numpy as npfrom scipy import statsimport matplotlib.pyplot as pltimport seaborn as sns  1df = pd.read_csv(&apos;http://jse.amstat.org/datasets/normtemp.dat.txt&apos;, header = Non">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-28T14:23:23.262Z">
+<meta property="og:updated_time" content="2019-08-28T14:30:52.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What&#39;s Normal? -- Temperature, Gender, and Heart Rate">
 <meta name="twitter:description" content="12345import pandas as pdimport numpy as npfrom scipy import statsimport matplotlib.pyplot as pltimport seaborn as sns  1df = pd.read_csv(&apos;http://jse.amstat.org/datasets/normtemp.dat.txt&apos;, header = Non">
@@ -348,52 +348,6 @@
 <h1 id="验证男女温度是否一致"><a href="#验证男女温度是否一致" class="headerlink" title="验证男女温度是否一致"></a>验证男女温度是否一致</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stats.ttest_ind(df.iloc[:,<span class="number">0</span>][df.iloc[:,<span class="number">1</span>]==<span class="number">1</span>],df.iloc[:,<span class="number">0</span>][df.iloc[:,<span class="number">1</span>]==<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
 
 <pre><code>Ttest_indResult(statistic=-2.2854345381654984, pvalue=0.02393188312240236)</code></pre><h1 id="验证温度和心率是否相关"><a href="#验证温度和心率是否相关" class="headerlink" title="验证温度和心率是否相关"></a>验证温度和心率是否相关</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.corr()</span><br></pre></td></tr></table></figure>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
-
-.dataframe thead th {
-    text-align: right;
-}</code></pre><p></style><p></p>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>体温</th>
-      <th>性别</th>
-      <th>心率</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>体温</th>
-      <td>1.000000</td>
-      <td>0.198006</td>
-      <td>0.253656</td>
-    </tr>
-    <tr>
-      <th>性别</th>
-      <td>0.198006</td>
-      <td>1.000000</td>
-      <td>0.055766</td>
-    </tr>
-    <tr>
-      <th>心率</th>
-      <td>0.253656</td>
-      <td>0.055766</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
 
 
       
