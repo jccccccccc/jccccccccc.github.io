@@ -86,12 +86,10 @@
 <meta property="og:site_name" content="jc的漫漫数据路">
 <meta property="og:description" content="12345import pandas as pdimport numpy as npfrom scipy import statsimport matplotlib.pyplot as pltimport seaborn as sns  1df = pd.read_csv(&apos;http://jse.amstat.org/datasets/normtemp.dat.txt&apos;, header = Non">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/08/28/output_8_0.png">
-<meta property="og:updated_time" content="2019-08-28T14:13:17.567Z">
+<meta property="og:updated_time" content="2019-08-28T14:23:23.262Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What&#39;s Normal? -- Temperature, Gender, and Heart Rate">
 <meta name="twitter:description" content="12345import pandas as pdimport numpy as npfrom scipy import statsimport matplotlib.pyplot as pltimport seaborn as sns  1df = pd.read_csv(&apos;http://jse.amstat.org/datasets/normtemp.dat.txt&apos;, header = Non">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/28/output_8_0.png">
 
 
 
@@ -339,13 +337,14 @@
 
 <h1 id="验证体温均值是否为98-6华氏度"><a href="#验证体温均值是否为98-6华氏度" class="headerlink" title="验证体温均值是否为98.6华氏度"></a>验证体温均值是否为98.6华氏度</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.iloc[:,<span class="number">0</span>].mean()</span><br></pre></td></tr></table></figure>
 
-<pre><code>98.24923076923076</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stats.ttest_1samp(df.iloc[:,<span class="number">0</span>],<span class="number">98.6</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>98.24923076923076</code></pre><a id="more"></a>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stats.ttest_1samp(df.iloc[:,<span class="number">0</span>],<span class="number">98.6</span>)</span><br></pre></td></tr></table></figure>
 
 <pre><code>Ttest_1sampResult(statistic=-5.454823292364077, pvalue=2.410632041561008e-07)</code></pre><h1 id="验证体温是否符合正态分布"><a href="#验证体温是否符合正态分布" class="headerlink" title="验证体温是否符合正态分布"></a>验证体温是否符合正态分布</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stats.normaltest(df.iloc[:,<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
 
 <pre><code>NormaltestResult(statistic=2.703801433319236, pvalue=0.2587479863488212)</code></pre><h1 id="哪些温度是异常值"><a href="#哪些温度是异常值" class="headerlink" title="哪些温度是异常值"></a>哪些温度是异常值</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f,ax=plt.subplots(figsize=(<span class="number">10</span>,<span class="number">8</span>))</span><br><span class="line">sns.boxplot(y=<span class="string">'体温'</span>,data=df,ax=ax)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p><img src="output_8_0.png" alt="png"></p>
 <h1 id="验证男女温度是否一致"><a href="#验证男女温度是否一致" class="headerlink" title="验证男女温度是否一致"></a>验证男女温度是否一致</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stats.ttest_ind(df.iloc[:,<span class="number">0</span>][df.iloc[:,<span class="number">1</span>]==<span class="number">1</span>],df.iloc[:,<span class="number">0</span>][df.iloc[:,<span class="number">1</span>]==<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
 
 <pre><code>Ttest_indResult(statistic=-2.2854345381654984, pvalue=0.02393188312240236)</code></pre><h1 id="验证温度和心率是否相关"><a href="#验证温度和心率是否相关" class="headerlink" title="验证温度和心率是否相关"></a>验证温度和心率是否相关</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.corr()</span><br></pre></td></tr></table></figure>
