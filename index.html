@@ -239,6 +239,210 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/28/What's Normal? -- Temperature, Gender, and Heart Rate/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jccccccccc">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jc的漫漫数据路">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/28/What's Normal? -- Temperature, Gender, and Heart Rate/" itemprop="url">What's Normal? -- Temperature, Gender, and Heart Rate</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-28T22:10:59+08:00">
+                2019-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/统计学/" itemprop="url" rel="index">
+                    <span itemprop="name">统计学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">'http://jse.amstat.org/datasets/normtemp.dat.txt'</span>, header = <span class="literal">None</span>,sep = <span class="string">'\s+'</span> ,names=[<span class="string">'体温'</span>,<span class="string">'性别'</span>,<span class="string">'心率'</span>])</span><br></pre></td></tr></table></figure>
+
+<h1 id="验证体温均值是否为98-6华氏度"><a href="#验证体温均值是否为98-6华氏度" class="headerlink" title="验证体温均值是否为98.6华氏度"></a>验证体温均值是否为98.6华氏度</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.iloc[:,<span class="number">0</span>].mean()</span><br></pre></td></tr></table></figure>
+
+<pre><code>98.24923076923076</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stats.ttest_1samp(df.iloc[:,<span class="number">0</span>],<span class="number">98.6</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Ttest_1sampResult(statistic=-5.454823292364077, pvalue=2.410632041561008e-07)</code></pre><h1 id="验证体温是否符合正态分布"><a href="#验证体温是否符合正态分布" class="headerlink" title="验证体温是否符合正态分布"></a>验证体温是否符合正态分布</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stats.normaltest(df.iloc[:,<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<pre><code>NormaltestResult(statistic=2.703801433319236, pvalue=0.2587479863488212)</code></pre><h1 id="哪些温度是异常值"><a href="#哪些温度是异常值" class="headerlink" title="哪些温度是异常值"></a>哪些温度是异常值</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f,ax=plt.subplots(figsize=(<span class="number">10</span>,<span class="number">8</span>))</span><br><span class="line">sns.boxplot(y=<span class="string">'体温'</span>,data=df,ax=ax)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="output_8_0.png" alt="png"></p>
+<h1 id="验证男女温度是否一致"><a href="#验证男女温度是否一致" class="headerlink" title="验证男女温度是否一致"></a>验证男女温度是否一致</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stats.ttest_ind(df.iloc[:,<span class="number">0</span>][df.iloc[:,<span class="number">1</span>]==<span class="number">1</span>],df.iloc[:,<span class="number">0</span>][df.iloc[:,<span class="number">1</span>]==<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+
+<pre><code>Ttest_indResult(statistic=-2.2854345381654984, pvalue=0.02393188312240236)</code></pre><h1 id="验证温度和心率是否相关"><a href="#验证温度和心率是否相关" class="headerlink" title="验证温度和心率是否相关"></a>验证温度和心率是否相关</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.corr()</span><br></pre></td></tr></table></figure>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}</code></pre><p></style><p></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>体温</th>
+      <th>性别</th>
+      <th>心率</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>体温</th>
+      <td>1.000000</td>
+      <td>0.198006</td>
+      <td>0.253656</td>
+    </tr>
+    <tr>
+      <th>性别</th>
+      <td>0.198006</td>
+      <td>1.000000</td>
+      <td>0.055766</td>
+    </tr>
+    <tr>
+      <th>心率</th>
+      <td>0.253656</td>
+      <td>0.055766</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/27/python基础2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -878,7 +1082,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

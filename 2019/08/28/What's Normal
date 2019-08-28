@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="离散分布离散均匀分布$$P(X=x|N) = \frac{1}{N}$$$$E(X) = \frac{N+1}{2}$$$$Var(X) = \frac{(N+1)(N-1)}{12}$$ 超几何分布$$P(X=x|N,M,K) = \frac{\binom{M}{x}\binom{N-M}{K-x}}{\binom{N}{K}}$$$$E(X) = \frac{KM}{N}$$$$Var(X)">
+<meta name="description" content="12345import pandas as pdimport numpy as npfrom scipy import statsimport matplotlib.pyplot as pltimport seaborn as sns  1df = pd.read_csv(&apos;http://jse.amstat.org/datasets/normtemp.dat.txt&apos;, header = Non">
 <meta property="og:type" content="article">
-<meta property="og:title" content="统计学-数据分布">
-<meta property="og:url" content="http://yoursite.com/2019/08/27/统计学-数据分布/index.html">
+<meta property="og:title" content="What&#39;s Normal? -- Temperature, Gender, and Heart Rate">
+<meta property="og:url" content="http://yoursite.com/2019/08/28/What's Normal">
 <meta property="og:site_name" content="jc的漫漫数据路">
-<meta property="og:description" content="离散分布离散均匀分布$$P(X=x|N) = \frac{1}{N}$$$$E(X) = \frac{N+1}{2}$$$$Var(X) = \frac{(N+1)(N-1)}{12}$$ 超几何分布$$P(X=x|N,M,K) = \frac{\binom{M}{x}\binom{N-M}{K-x}}{\binom{N}{K}}$$$$E(X) = \frac{KM}{N}$$$$Var(X)">
+<meta property="og:description" content="12345import pandas as pdimport numpy as npfrom scipy import statsimport matplotlib.pyplot as pltimport seaborn as sns  1df = pd.read_csv(&apos;http://jse.amstat.org/datasets/normtemp.dat.txt&apos;, header = Non">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-27T11:38:46.005Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/28/output_8_0.png">
+<meta property="og:updated_time" content="2019-08-28T14:13:17.567Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="统计学-数据分布">
-<meta name="twitter:description" content="离散分布离散均匀分布$$P(X=x|N) = \frac{1}{N}$$$$E(X) = \frac{N+1}{2}$$$$Var(X) = \frac{(N+1)(N-1)}{12}$$ 超几何分布$$P(X=x|N,M,K) = \frac{\binom{M}{x}\binom{N-M}{K-x}}{\binom{N}{K}}$$$$E(X) = \frac{KM}{N}$$$$Var(X)">
+<meta name="twitter:title" content="What&#39;s Normal? -- Temperature, Gender, and Heart Rate">
+<meta name="twitter:description" content="12345import pandas as pdimport numpy as npfrom scipy import statsimport matplotlib.pyplot as pltimport seaborn as sns  1df = pd.read_csv(&apos;http://jse.amstat.org/datasets/normtemp.dat.txt&apos;, header = Non">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/28/output_8_0.png">
 
 
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/27/统计学-数据分布/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/28/What's Normal">
 
 
 
 
 
-  <title>统计学-数据分布 | jc的漫漫数据路</title>
+  <title>What's Normal? -- Temperature, Gender, and Heart Rate | jc的漫漫数据路</title>
   
 
 
@@ -242,7 +244,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/27/统计学-数据分布/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/28/What's Normal? -- Temperature, Gender, and Heart Rate/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jccccccccc">
@@ -259,7 +261,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">统计学-数据分布</h1>
+          <h1 class="post-title" itemprop="name headline">What's Normal? -- Temperature, Gender, and Heart Rate</h1>
         
 
         <div class="post-meta">
@@ -271,8 +273,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-27T18:59:57+08:00">
-                2019-08-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-28T22:10:59+08:00">
+                2019-08-28
               </time>
             
 
@@ -331,27 +333,69 @@
       
 
       
-        <h2 id="离散分布"><a href="#离散分布" class="headerlink" title="离散分布"></a>离散分布</h2><h3 id="离散均匀分布"><a href="#离散均匀分布" class="headerlink" title="离散均匀分布"></a>离散均匀分布</h3><p>$$P(X=x|N) = \frac{1}{N}$$<br>$$E(X) = \frac{N+1}{2}$$<br>$$Var(X) = \frac{(N+1)(N-1)}{12}$$</p>
-<h3 id="超几何分布"><a href="#超几何分布" class="headerlink" title="超几何分布"></a>超几何分布</h3><p>$$P(X=x|N,M,K) = \frac{\binom{M}{x}\binom{N-M}{K-x}}{\binom{N}{K}}$$<br>$$E(X) = \frac{KM}{N}$$<br>$$Var(X) = \frac{KM}{N}(\frac{(N-M)(N-K)}{N(N-1)})$$</p>
-<a id="more"></a>
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br></pre></td></tr></table></figure>
 
-<h3 id="伯努利分布"><a href="#伯努利分布" class="headerlink" title="伯努利分布"></a>伯努利分布</h3><p>$$P(X=x)=p^x(1-p)^{1-x}$$<br>$$E(X)=p$$<br>$$ Var(X)=p(1-p)$$</p>
-<h3 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h3><p>$$P(X=x|n,p)=\binom{n}{x}p^x(1-p)^{n-x}$$<br>$$E(X)=np$$<br>$$ Var(X)=np(1-p)$$</p>
-<h3 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h3><p>$$P(X=x|\lambda) = \frac{e^{-x}\lambda^x}{x!}$$<br>$$E(X) = \lambda$$<br>$$Var(X) = \lambda$$</p>
-<h3 id="负二项分布"><a href="#负二项分布" class="headerlink" title="负二项分布"></a>负二项分布</h3><p>$$P(X=x|r,p)=\binom{x-1}{r-1}p^r(1-p)^{x-r}$$<br>$$E(X)=\frac{r(1-p)}{p}$$<br>$$Var(X)=\frac{r(1-p)}{p^2}$$</p>
-<h3 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h3><p>$$P(X=x|p)=p(1-p)^{x-1}$$<br>$$E(X)=\frac{1}{p}$$<br>$$Var(X)=\frac{(1-p)}{p^2}$$</p>
-<h2 id="连续分布"><a href="#连续分布" class="headerlink" title="连续分布"></a>连续分布</h2><h3 id="连续均匀分布"><a href="#连续均匀分布" class="headerlink" title="连续均匀分布"></a>连续均匀分布</h3><p>$$<br>f(x|a,b) =<br>\begin{cases}<br>\frac{1}{b-a}  \<br>0<br>\end{cases}<br>$$<br>$$E(X)=\frac{a+b}{2}$$<br>$$Var(X)=\frac{(b-a)^2}{12}$$</p>
-<h3 id="伽马分布"><a href="#伽马分布" class="headerlink" title="伽马分布"></a>伽马分布</h3><p>$$\Gamma(\alpha)=\int_{0}^\infty t^{\alpha-1}e^{-t}dt$$<br>$$f(x|\alpha,\beta)=\frac{1}{\Gamma(\alpha)\beta^\alpha}x^{\alpha-1}e^{-x/\beta}$$<br>$$E(X)=\alpha\beta$$<br>$$Var(X)=\alpha\beta^2$$</p>
-<ul>
-<li>当$\alpha=p/2$且$\beta=2$时，伽马分布为卡方分布</li>
-<li>当$\alpha=1$时，伽马分布为指数分布</li>
-</ul>
-<h3 id="威布尔分布"><a href="#威布尔分布" class="headerlink" title="威布尔分布"></a>威布尔分布</h3><p>$$f_Y(y|\gamma,\beta)=\frac{\gamma}{\beta}y^{\gamma-1}e^{-y^{\gamma}/\beta}$$</p>
-<h3 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h3><p>$$f(x|\mu,\sigma^2)=\frac{1}{\sqrt{2\pi}\sigma}e^{-(x-\mu)^2/2\sigma^2}$$<br>$$E(X)=\mu$$<br>$$Var(X)=\sigma^2$$</p>
-<h3 id="贝塔分布"><a href="#贝塔分布" class="headerlink" title="贝塔分布"></a>贝塔分布</h3><p>$$B(\alpha,\beta)=\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$$<br>$$f(x|\alpha,\beta)=\frac{1}{B(\alpha,\beta)}x^{\alpha-1}(1-x)^{\beta-1}$$<br>$$E(X)=\frac{\alpha}{\alpha+\beta}$$<br>$$Var(X)=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$$</p>
-<h3 id="柯西分布"><a href="#柯西分布" class="headerlink" title="柯西分布"></a>柯西分布</h3><p>$$f(x|\theta)=\frac{1}{\pi}\frac{1}{1+(x-\theta)^2}$$</p>
-<h3 id="对数正态分布"><a href="#对数正态分布" class="headerlink" title="对数正态分布"></a>对数正态分布</h3><p>$$f(x|\mu,\sigma^2)=\frac{1}{\sqrt{2\pi}\sigma}\frac{1}{x}e^{-(logx-\mu)^2/2\sigma^2}$$<br>$$E(X)=e^{\mu+(\sigma^2/2)}$$<br>$$Var(X)=e^{2(\mu+\sigma^2)}-e^{2\mu+\sigma^2}$$</p>
-<h3 id="双指数分布"><a href="#双指数分布" class="headerlink" title="双指数分布"></a>双指数分布</h3><p>$$f(x|\mu,\sigma)=\frac{1}{2\sigma}e^{-|x-\mu|/\sigma}$$<br>$$E(X)=\mu$$<br>$$Var(X)=2\sigma^2$$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">'http://jse.amstat.org/datasets/normtemp.dat.txt'</span>, header = <span class="literal">None</span>,sep = <span class="string">'\s+'</span> ,names=[<span class="string">'体温'</span>,<span class="string">'性别'</span>,<span class="string">'心率'</span>])</span><br></pre></td></tr></table></figure>
+
+<h1 id="验证体温均值是否为98-6华氏度"><a href="#验证体温均值是否为98-6华氏度" class="headerlink" title="验证体温均值是否为98.6华氏度"></a>验证体温均值是否为98.6华氏度</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.iloc[:,<span class="number">0</span>].mean()</span><br></pre></td></tr></table></figure>
+
+<pre><code>98.24923076923076</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stats.ttest_1samp(df.iloc[:,<span class="number">0</span>],<span class="number">98.6</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Ttest_1sampResult(statistic=-5.454823292364077, pvalue=2.410632041561008e-07)</code></pre><h1 id="验证体温是否符合正态分布"><a href="#验证体温是否符合正态分布" class="headerlink" title="验证体温是否符合正态分布"></a>验证体温是否符合正态分布</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stats.normaltest(df.iloc[:,<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<pre><code>NormaltestResult(statistic=2.703801433319236, pvalue=0.2587479863488212)</code></pre><h1 id="哪些温度是异常值"><a href="#哪些温度是异常值" class="headerlink" title="哪些温度是异常值"></a>哪些温度是异常值</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f,ax=plt.subplots(figsize=(<span class="number">10</span>,<span class="number">8</span>))</span><br><span class="line">sns.boxplot(y=<span class="string">'体温'</span>,data=df,ax=ax)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="output_8_0.png" alt="png"></p>
+<h1 id="验证男女温度是否一致"><a href="#验证男女温度是否一致" class="headerlink" title="验证男女温度是否一致"></a>验证男女温度是否一致</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stats.ttest_ind(df.iloc[:,<span class="number">0</span>][df.iloc[:,<span class="number">1</span>]==<span class="number">1</span>],df.iloc[:,<span class="number">0</span>][df.iloc[:,<span class="number">1</span>]==<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+
+<pre><code>Ttest_indResult(statistic=-2.2854345381654984, pvalue=0.02393188312240236)</code></pre><h1 id="验证温度和心率是否相关"><a href="#验证温度和心率是否相关" class="headerlink" title="验证温度和心率是否相关"></a>验证温度和心率是否相关</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.corr()</span><br></pre></td></tr></table></figure>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}</code></pre><p></style><p></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>体温</th>
+      <th>性别</th>
+      <th>心率</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>体温</th>
+      <td>1.000000</td>
+      <td>0.198006</td>
+      <td>0.253656</td>
+    </tr>
+    <tr>
+      <th>性别</th>
+      <td>0.198006</td>
+      <td>1.000000</td>
+      <td>0.055766</td>
+    </tr>
+    <tr>
+      <th>心率</th>
+      <td>0.253656</td>
+      <td>0.055766</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
       
     </div>
@@ -376,8 +420,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/27/统计学-描述性统计/" rel="next" title="统计学-描述性统计">
-                <i class="fa fa-chevron-left"></i> 统计学-描述性统计
+              <a href="/2019/08/27/python基础2/" rel="next" title="python基础2">
+                <i class="fa fa-chevron-left"></i> python基础2
               </a>
             
           </div>
@@ -385,10 +429,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/27/python基础/" rel="prev" title="python基础">
-                python基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -511,7 +551,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#离散分布"><span class="nav-number">1.</span> <span class="nav-text">离散分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#离散均匀分布"><span class="nav-number">1.1.</span> <span class="nav-text">离散均匀分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#超几何分布"><span class="nav-number">1.2.</span> <span class="nav-text">超几何分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伯努利分布"><span class="nav-number">1.3.</span> <span class="nav-text">伯努利分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二项分布"><span class="nav-number">1.4.</span> <span class="nav-text">二项分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泊松分布"><span class="nav-number">1.5.</span> <span class="nav-text">泊松分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负二项分布"><span class="nav-number">1.6.</span> <span class="nav-text">负二项分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几何分布"><span class="nav-number">1.7.</span> <span class="nav-text">几何分布</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连续分布"><span class="nav-number">2.</span> <span class="nav-text">连续分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#连续均匀分布"><span class="nav-number">2.1.</span> <span class="nav-text">连续均匀分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伽马分布"><span class="nav-number">2.2.</span> <span class="nav-text">伽马分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#威布尔分布"><span class="nav-number">2.3.</span> <span class="nav-text">威布尔分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正态分布"><span class="nav-number">2.4.</span> <span class="nav-text">正态分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#贝塔分布"><span class="nav-number">2.5.</span> <span class="nav-text">贝塔分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#柯西分布"><span class="nav-number">2.6.</span> <span class="nav-text">柯西分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对数正态分布"><span class="nav-number">2.7.</span> <span class="nav-text">对数正态分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双指数分布"><span class="nav-number">2.8.</span> <span class="nav-text">双指数分布</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#验证体温均值是否为98-6华氏度"><span class="nav-number">1.</span> <span class="nav-text">验证体温均值是否为98.6华氏度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#验证体温是否符合正态分布"><span class="nav-number">2.</span> <span class="nav-text">验证体温是否符合正态分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#哪些温度是异常值"><span class="nav-number">3.</span> <span class="nav-text">哪些温度是异常值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#验证男女温度是否一致"><span class="nav-number">4.</span> <span class="nav-text">验证男女温度是否一致</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#验证温度和心率是否相关"><span class="nav-number">5.</span> <span class="nav-text">验证温度和心率是否相关</span></a></li></ol></div>
             
 
           </div>
