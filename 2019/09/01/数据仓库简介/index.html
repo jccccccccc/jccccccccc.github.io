@@ -79,17 +79,32 @@
 
 
 
-<meta name="description" content="t分布在概率论和统计学中，t-分布（t-distribution）用于根据小样本来估计呈正态分布且方差未知的总体的均值。如果总体方差已知（例如在样本数量足够多时），则应该用正态分布来估计总体均值。t分布曲线形态与n（确切地说与自由度df）大小有关。与标准正态分布曲线相比，自由度df越小，t分布曲线愈平坦，曲线中间愈低，曲线双侧尾部翘得愈高；自由度df愈大，t分布曲线愈接近正态分布曲线，当自由度df">
+<meta name="description" content="数仓痛点 数仓模型 数仓规范 外围系统建设 发展方向展望">
 <meta property="og:type" content="article">
-<meta property="og:title" content="统计学-抽样分布">
-<meta property="og:url" content="http://yoursite.com/2019/08/28/统计学-抽样分布/index.html">
+<meta property="og:title" content="数据仓库简介">
+<meta property="og:url" content="http://yoursite.com/2019/09/01/数据仓库简介/index.html">
 <meta property="og:site_name" content="jc的漫漫数据路">
-<meta property="og:description" content="t分布在概率论和统计学中，t-分布（t-distribution）用于根据小样本来估计呈正态分布且方差未知的总体的均值。如果总体方差已知（例如在样本数量足够多时），则应该用正态分布来估计总体均值。t分布曲线形态与n（确切地说与自由度df）大小有关。与标准正态分布曲线相比，自由度df越小，t分布曲线愈平坦，曲线中间愈低，曲线双侧尾部翘得愈高；自由度df愈大，t分布曲线愈接近正态分布曲线，当自由度df">
+<meta property="og:description" content="数仓痛点 数仓模型 数仓规范 外围系统建设 发展方向展望">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-28T15:14:49.547Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/0.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/4.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/5.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/6.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/7.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/8.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/9.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/10.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/11.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/12.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/13.png">
+<meta property="og:updated_time" content="2019-09-02T15:15:56.866Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="统计学-抽样分布">
-<meta name="twitter:description" content="t分布在概率论和统计学中，t-分布（t-distribution）用于根据小样本来估计呈正态分布且方差未知的总体的均值。如果总体方差已知（例如在样本数量足够多时），则应该用正态分布来估计总体均值。t分布曲线形态与n（确切地说与自由度df）大小有关。与标准正态分布曲线相比，自由度df越小，t分布曲线愈平坦，曲线中间愈低，曲线双侧尾部翘得愈高；自由度df愈大，t分布曲线愈接近正态分布曲线，当自由度df">
+<meta name="twitter:title" content="数据仓库简介">
+<meta name="twitter:description" content="数仓痛点 数仓模型 数仓规范 外围系统建设 发展方向展望">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/01/数据仓库简介/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/0.png">
 
 
 
@@ -119,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/28/统计学-抽样分布/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/01/数据仓库简介/">
 
 
 
 
 
-  <title>统计学-抽样分布 | jc的漫漫数据路</title>
+  <title>数据仓库简介 | jc的漫漫数据路</title>
   
 
 
@@ -242,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/28/统计学-抽样分布/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/01/数据仓库简介/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jccccccccc">
@@ -259,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">统计学-抽样分布</h1>
+          <h1 class="post-title" itemprop="name headline">数据仓库简介</h1>
         
 
         <div class="post-meta">
@@ -271,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-28T18:59:57+08:00">
-                2019-08-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-01T22:45:57+08:00">
+                2019-09-01
               </time>
             
 
@@ -294,8 +309,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/统计学/" itemprop="url" rel="index">
-                    <span itemprop="name">统计学</span>
+                  <a href="/categories/数据仓库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据仓库</span>
                   </a>
                 </span>
 
@@ -331,9 +346,11 @@
       
 
       
-        <h2 id="t分布"><a href="#t分布" class="headerlink" title="t分布"></a>t分布</h2><p>在概率论和统计学中，t-分布（t-distribution）用于根据小样本来估计呈正态分布且方差未知的总体的均值。如果总体方差已知（例如在样本数量足够多时），则应该用正态分布来估计总体均值。<br>t分布曲线形态与n（确切地说与自由度df）大小有关。与标准正态分布曲线相比，自由度df越小，t分布曲线愈平坦，曲线中间愈低，曲线双侧尾部翘得愈高；自由度df愈大，t分布曲线愈接近正态分布曲线，当自由度df=∞时，t分布曲线为标准正态分布曲线。</p>
-<h2 id="卡方分布"><a href="#卡方分布" class="headerlink" title="卡方分布"></a>卡方分布</h2><p>若n个相互独立的随机变量ξ₁，ξ₂，…,ξn ，均服从标准正态分布（也称独立同分布于标准正态分布），则这n个服从标准正态分布的随机变量的平方和构成一新的随机变量，其分布规律称为卡方分布（chi-square distribution）。</p>
-<h2 id="f分布"><a href="#f分布" class="headerlink" title="f分布"></a>f分布</h2><p>F分布是1924年英国统计学家R.A.Fisher提出，并以其姓氏的第一个字母命名的。它是一种非对称分布，有两个自由度，且位置不可互换。F分布有着广泛的应用，如在方差分析、回归方程的显著性检验中都有着重要的地位。</p>
+        <h2 id="数仓痛点"><a href="#数仓痛点" class="headerlink" title="数仓痛点"></a>数仓痛点</h2><p><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/0.png" alt="数据仓库的痛点"><br><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/1.png" alt="数据仓库的痛点"></p>
+<h2 id="数仓模型"><a href="#数仓模型" class="headerlink" title="数仓模型"></a>数仓模型</h2><p><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/2.png" alt="数据仓库的痛点"><br><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/3.png" alt="数据仓库的痛点"><br><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/4.png" alt="数据仓库的痛点"></p>
+<h2 id="数仓规范"><a href="#数仓规范" class="headerlink" title="数仓规范"></a>数仓规范</h2><p><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/5.png" alt="数据仓库的痛点"><br><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/6.png" alt="数据仓库的痛点"><br><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/7.png" alt="数据仓库的痛点"><br><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/8.png" alt="数据仓库的痛点"></p>
+<h2 id="外围系统建设"><a href="#外围系统建设" class="headerlink" title="外围系统建设"></a>外围系统建设</h2><p><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/9.png" alt="数据仓库的痛点"><br><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/10.png" alt="数据仓库的痛点"><br><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/11.png" alt="数据仓库的痛点"></p>
+<h2 id="发展方向展望"><a href="#发展方向展望" class="headerlink" title="发展方向展望"></a>发展方向展望</h2><p><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/12.png" alt="数据仓库的痛点"><br><img src="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%AE%80%E4%BB%8B/13.png" alt="数据仓库的痛点"></p>
 
       
     </div>
@@ -358,8 +375,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/28/统计学-参数估计/" rel="next" title="统计学-参数估计">
-                <i class="fa fa-chevron-left"></i> 统计学-参数估计
+              <a href="/2019/08/28/titanic/" rel="next" title="titanic">
+                <i class="fa fa-chevron-left"></i> titanic
               </a>
             
           </div>
@@ -367,10 +384,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/28/normal/" rel="prev" title="normal">
-                normal <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -493,7 +506,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#t分布"><span class="nav-number">1.</span> <span class="nav-text">t分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#卡方分布"><span class="nav-number">2.</span> <span class="nav-text">卡方分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#f分布"><span class="nav-number">3.</span> <span class="nav-text">f分布</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数仓痛点"><span class="nav-number">1.</span> <span class="nav-text">数仓痛点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数仓模型"><span class="nav-number">2.</span> <span class="nav-text">数仓模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数仓规范"><span class="nav-number">3.</span> <span class="nav-text">数仓规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外围系统建设"><span class="nav-number">4.</span> <span class="nav-text">外围系统建设</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发展方向展望"><span class="nav-number">5.</span> <span class="nav-text">发展方向展望</span></a></li></ol></div>
             
 
           </div>
